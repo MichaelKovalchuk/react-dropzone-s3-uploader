@@ -90,6 +90,12 @@ export default class DropzoneS3Uploader extends React.Component {
     }
   }
 
+  uploadFile = file => {
+    if (this.uploader) {
+      this.uploader.uploadFile(file);
+    }
+  }
+
   setUploaderOptions = props => {
     this.setState({
       uploaderOptions: Object.assign({
